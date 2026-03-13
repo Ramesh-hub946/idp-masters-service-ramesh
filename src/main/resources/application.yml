@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: idp-masters-service
+  profiles:
+    active: local
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+        default-page-size: 10
+server:
+  port: 2004
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+app:
+  jwt:
+    secret: change_this_to_a_long_random_secret_change_this_to_at_least_32_chars_long
