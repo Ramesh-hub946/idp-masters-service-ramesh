@@ -12,8 +12,8 @@ phases:
 
   build:
     commands:
-      - echo Build started
-      - mvn clean package
+      - chmod +x mvnw
+      - ./mvnw clean package
 
 artifacts:
   files:
