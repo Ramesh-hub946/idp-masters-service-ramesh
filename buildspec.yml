@@ -4,9 +4,9 @@ phases:
   install:
     commands:
       - echo Installing Java 21
-      - wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.tar.gz
-      - tar -xzf amazon-corretto-21-x64-linux-jdk.tar.gz
-      - export JAVA_HOME=$(pwd)/amazon-corretto-21*
+      - yum update -y
+      - yum install -y java-21-amazon-corretto-devel
+      - export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
       - export PATH=$JAVA_HOME/bin:$PATH
       - echo $JAVA_HOME
       - java -version
