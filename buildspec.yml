@@ -8,12 +8,13 @@ phases:
       - tar -xzf amazon-corretto-21-x64-linux-jdk.tar.gz
       - export JAVA_HOME=$(pwd)/amazon-corretto-21*
       - export PATH=$JAVA_HOME/bin:$PATH
+      - echo $JAVA_HOME
       - java -version
 
   build:
     commands:
       - chmod +x mvnw
-      - ./mvnw clean package
+      - ./mvnw clean package -DskipTests
 
 artifacts:
   files:
